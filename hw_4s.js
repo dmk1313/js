@@ -1,5 +1,5 @@
 //1*
-let age //= prompt("How old are you?") ;
+let age = prompt("How old are you?") ;
 const checkAge = function(age){
     //2*
     age=Number(age); 
