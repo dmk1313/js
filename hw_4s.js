@@ -24,11 +24,6 @@ const checkAge = function(age){
     }
     return result;
 }
-checkAge(17);
-checkAge(18);
-checkAge(61);
 
-//2* and 3**
-checkAge('17');
 //4***
 checkAge(age);
