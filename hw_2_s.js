@@ -1,7 +1,7 @@
 //1*
-const age = prompt("title") ;
+let age;
 let result;
-checkAge = function(age){
+const checkAge = function(age){
     //2*
     if(typeof(age) !== "number"){
         console.log("Error");
@@ -30,5 +30,3 @@ checkAge(61);
 
 //2* and 3**
 checkAge('17');
-//4***
-checkAge(age);
