@@ -1,13 +1,16 @@
 let stroka;
+let a;
 const hesh = function(stroka){
-    if(stroka.length > 140){
-        console.log(Boolean(false));
-    }
-    else if (stroka.trim() == ''){
-        console.log(Boolean(false));
+
+    // if (stroka.trim() == ''){
+    //     return false;
+    // }
+    a = stroka.split(/\s/).map(word => word[0].toUpperCase() + word.substring(1)).join("");
+    if (a.length > 140){
+        return false;
     }
     else {
-        console.log("#" + stroka.split(/\s/).map(word => word[0].toUpperCase() + word.substring(1)).join(""));
+        console.log("#" + a);
     }
 }
-hesh("")
+hesh("sadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdfsadfasdfa asd fa sdf")
