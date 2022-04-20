@@ -1,11 +1,10 @@
 //1*
 let age = prompt("How old are you?") ;
-let result;
 const checkAge = function(age){
     //2*
-    if(typeof(age) !== "number"){
+    age=Number(age); 
+    if(!age){
         console.log("Error");
-        age=Number(age); 
     }
     else{
     
@@ -22,7 +21,6 @@ const checkAge = function(age){
     else{
         console.log("Technical work");
     }
-    return result;
 }
 checkAge(17);
 checkAge(18);
