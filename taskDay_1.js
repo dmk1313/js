@@ -1,14 +1,13 @@
 let stroka;
 const hesh = function(stroka){
-    //if (stroka == stroka.toUpperCase())
-    if(stroka.length > 144){
-        console.log("Error");
+    if(stroka.length > 140){
+        console.log(Boolean(false));
     }
-    else if (stroka == "" || stroka == " "){
-        console.log("Empty");
+    else if (stroka.trim() == ''){
+        console.log(Boolean(false));
     }
     else {
         console.log("#" + stroka.split(/\s/).map(word => word[0].toUpperCase() + word.substring(1)).join(""));
     }
 }
-hesh("Hello world")
+hesh("")
