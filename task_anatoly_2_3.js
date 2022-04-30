@@ -83,7 +83,7 @@ let sum = 0
   }
   
 
-//
+
 // const copy = []
 // enterprises.forEach(function(el, i){
 //   copy.push(el.name)
