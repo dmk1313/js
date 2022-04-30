@@ -56,12 +56,41 @@ const enterprises = [
 
 // let a = 0;
 
-// for(el of enterprises){
-//     console.log(el.id)
-//     a +=el.id
-    
-// }  
+// for(let i = 0; i < enterprises.length; i++){
+//   for(let j = 0; j < departments.length; j++){
+//     console.log(i.enterprises.departments.j.name)
+//   }
+// } 
 
 
-console.log(enterprises[1])
 
+//что то можно придумать
+//console.log(enterprises.departments[0].name)
+let sum = 0
+  for(let i = 0; i < enterprises.length; i++){
+    console.log(enterprises[i].name, '(' + sum, 'сотрудников)')
+    sum=0
+    for(let j = 0; j < enterprises.length; j++){
+      sum+=enterprises[i].departments[j].employees_count;
+      if(enterprises[i].departments[j].employees_count === 0){
+        console.log(enterprises[i].name, '(нет сотрудников)')
+        console.log('-', enterprises[i].departments[j].name, '(нет сотрудников)')
+        break
+      } 
+        console.log('-', enterprises[i].departments[j].name, '('+ 
+        enterprises[i].departments[j].employees_count, 'сотрудников)')
+    }
+  }
+  
+
+
+// const copy = []
+// enterprises.forEach(function(el, i){
+//   copy.push(el.name)
+//   copy.push(el.employees_count[i])
+//   //for(let i = 0; i < enterprises.length; i++){
+//   //copy.push(el.departments)
+//   //}
+  
+// })
+// console.log(copy)
