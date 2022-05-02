@@ -66,21 +66,24 @@ const enterprises = [
 
 //что то можно придумать
 //console.log(enterprises.departments[0].name)
-let sum = 0
-  for(let i = 0; i < enterprises.length; i++){
-    console.log(enterprises[i].name, '(' + sum, 'сотрудников)')
-    sum=0
-    for(let j = 0; j < enterprises.length; j++){
-      sum+=enterprises[i].departments[j].employees_count;
-      if(enterprises[i].departments[j].employees_count === 0){
-        console.log(enterprises[i].name, '(нет сотрудников)')
-        console.log('-', enterprises[i].departments[j].name, '(нет сотрудников)')
-        break
-      } 
-        console.log('-', enterprises[i].departments[j].name, '('+ 
-        enterprises[i].departments[j].employees_count, 'сотрудников)')
-    }
-  }
+
+
+
+// let sum = 0
+//   for(let i = 0; i < enterprises.length; i++){
+//     console.log(enterprises[i].name, '(' + sum, 'сотрудников)')
+//     sum=0
+//     for(let j = 0; j < enterprises.length; j++){
+//       sum+=enterprises[i].departments[j].employees_count;
+//       if(enterprises[i].departments[j].employees_count === 0){
+//         console.log(enterprises[i].name, '(нет сотрудников)')
+//         console.log('-', enterprises[i].departments[j].name, '(нет сотрудников)')
+//         break
+//       } 
+//         console.log('-', enterprises[i].departments[j].name, '('+ 
+//         enterprises[i].departments[j].employees_count, 'сотрудников)')
+//     }
+//   }
   
 
 //
@@ -94,3 +97,55 @@ let sum = 0
   
 // })
 // console.log(copy)
+
+// const findEmployees = function(massJ){
+//   for(let i = 0; i<massJ.length; i++){
+//     console.log(massJ.filter(el => el.departments.name !==0))
+//   }
+// }
+
+// findEmployees(enterprises)
+
+let sum = 0;
+
+enterprises.forEach(org => {
+  let newEnterprises = []
+  if (org.departments) {
+    sum=0
+    org.departments.forEach(dept => {
+      sum+=dept.employees_count
+      if(dept.employees_count === 0){
+        newEnterprises.push('- ' + dept.name + ' (нет сотрудников)')
+      } else{
+        newEnterprises.push('- ' +  dept.name + ' (' + dept.employees_count + ' сотрудников)')
+      }
+      })
+  }
+  if(sum===0){
+    console.log(org.name + ' (нет сотрудников)')
+  } else{
+  console.log(org.name + ' (' + sum + ' сотрудников)')
+  }
+  console.log(newEnterprises.join('\n'))
+})
+
+
+
+
+// let sum = 0;
+
+
+// enterprises.forEach(org => {
+// let newEnterprises = []
+//   if (org.departments) {
+//       let array = []
+//     sum=0
+//     org.departments.forEach(dept => {
+//       sum+=dept.employees_count
+//       newEnterprises.push('- ' +  dept.name + ' (' + dept.employees_count + ' сотрудников)')
+
+//       })
+//   }
+//   console.log(org.name + ' ' + sum + ' сотрудников')
+//   console.log(newEnterprises)
+// })
