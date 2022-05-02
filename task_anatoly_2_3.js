@@ -72,7 +72,7 @@ enterprises.forEach(org => {
   if(sum===0){
     console.log(org.name + ' (нет сотрудников)')
   } else{
-  console.log(org.name + ' (' + sum + ' сотрудников)')
+    console.log(org.name + ' (' + sum + ' сотрудников)')
   }
   console.log(newEnterprises.join('\n'))
 })
