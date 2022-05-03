@@ -54,6 +54,7 @@ const enterprises = [
     }
   ]
 
+
 //3.1
 const searchCount = function (massJ) {
   massJ.forEach(org => {
@@ -125,9 +126,7 @@ const addDepartment = function(item_1, item_2){
     if(org.id === item_1){
       org.departments.push({id: newId(), name: item_2, employees_count: 0})
     }
-
   })
-  
 }
 
 addDepartment(1, "Название нового отдела")
@@ -156,7 +155,6 @@ const editDepartment = function(item_1,item_2){
         dep.name = item_2
       }
     })
-
   })
 }
 
@@ -211,4 +209,4 @@ const moveEmployees = function(item_1, item_2){
 }
 
 //moveEmployees(2, 3)
-console.log(enterprises[0])
+//console.log(enterprises[0])
