@@ -192,15 +192,13 @@ const deleteDepartment = function(item_1){
 
 //3.9
 const moveEmployees = function(item_1, item_2){
-  let buf=0
   enterprises.forEach(org =>{
     org.departments.forEach(dep =>{
       if(dep.id === item_1){
         org.departments.forEach(copy =>{
           if(copy.id === item_2){
-            buf=dep.employees_count
-            dep.employees_count=copy.employees_count
-            copy.employees_count=buf
+            dep.employees_count +=copy.employees_count
+            copy.employees_count=0
           }
         })
       }
@@ -208,5 +206,5 @@ const moveEmployees = function(item_1, item_2){
   })
 }
 
-//moveEmployees(2, 3)
-//console.log(enterprises[0])
+moveEmployees(2, 3)
+console.log(enterprises[0])
