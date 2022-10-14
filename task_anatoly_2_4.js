@@ -88,16 +88,53 @@ const company = [
 //   }
 //   console.log(reckur(company))
 
-  const searchCount = function (massJ) {
-    for (let i = 0; i < massJ.length; i++) {
-        if (Array.isArray(massJ[i])) { // if array
-          incrementNestedNumbers(massJ[i]);
-        } else { // if number
-          massJ[i]
-        }
-      }
-    }
+//   const searchCount = function (massJ) {
+//     for (let i = 0; i < massJ.length; i++) {
+//         if (Array.isArray(massJ[i])) { // if array
+//           incrementNestedNumbers(massJ[i]);
+//         } else { // if number
+//           massJ[i]
+//         }
+//       }
+//     }
   
-//searchCount(company)
-console.log(searchCount(company))
-//console.log(company)
+// //searchCount(company)
+// console.log(searchCount(company))
+// //console.log(company)
+
+const til = function(mass){
+  mass.forEach(el =>{
+    console.log("-")
+    if(el !== 0){
+      console.log("--")
+      til(mass)
+    }
+  })
+}
+
+//til(company)
+
+
+const test = function (data) {
+  let result = [];
+  //let til = "-- "
+  data.forEach(el => {
+    //console.log("-- ")
+    //result.push(el.name + "(" + el.users_count + ")");
+    
+    console.log(el.name + "(" + el.users_count + ")")
+
+    if (el.children)
+      
+      //result.push(til); 
+      //til()
+      test(el.children)
+      //console.log(test(el.children));
+      console.log("--")         
+  });
+  //console.log(result.join('\n'))
+  //return result;
+}
+
+//console.log(test(company));
+test(company)
